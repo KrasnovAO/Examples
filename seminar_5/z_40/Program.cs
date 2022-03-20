@@ -44,4 +44,4 @@ int FindMin(int[] coll)
 int[] arr = new int[24];
 FillArray(arr);
 PrintArray(arr);
-Console.WriteLine (FindMax(arr)-FindMin(arr));
+Console.WriteLine (FindMax(arr)-FindMin(arr)); */
