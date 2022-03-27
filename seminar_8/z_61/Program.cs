@@ -30,20 +30,21 @@ int[,] array = new int[m, n];
 FillArray(array);
 PrintArray(array);
 Console.WriteLine("");
-void mult(int[,] ar1, int[,] ar2)
-{
-    int[,] res = new int[ar1.GetLength(0), ar2.GetLength(1)];
 
-    for (int i = 0; i < ar1.GetLength(0); i++)
+void ProductOfMatrices(int[,] m1, int[,] m2)
+{
+    int[,] res = new int[m1.GetLength(0), m2.GetLength(1)];
+
+    for (int i = 0; i < m1.GetLength(0); i++)
     {
-        for (int j = 0; j < ar2.GetLength(0); j++)
+        for (int j = 0; j < m2.GetLength(0); j++)
         {
-            for (int k = 0; k < ar2.GetLength(1); k++)
+            for (int k = 0; k < m2.GetLength(1); k++)
             {
-                res[i,k] += ar1[i, j] * ar2[j, k];
+                res[i,k] += m1[i, j] * m2[j, k];
             }
         }
     }
     PrintArray(res);
 }
-mult(array, array);
+ProductOfMatrices(array, array);
